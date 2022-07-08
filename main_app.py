@@ -33,3 +33,4 @@ if streamlit.button('Add to Table'):
    back_from_function = insert_row_snowflake(add_row)
    my_cnx.close()
    streamlit.text(back_from_function)
+   streamlit.balloons()
