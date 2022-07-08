@@ -37,3 +37,14 @@ if streamlit.button('Add to Table'):
    my_cnx.close()
    streamlit.text(back_from_function)
    
+streamlit.header('Deleting Data')
+def clear_table():
+   with my_cnx.cursor() as my_cur:
+      my_cur.execute("Truncate table TEST_TABLE")
+      return "Table has been cleared"
+
+   if streamlit.button('Clear Table'):
+      my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+      back_from_function = clear_table()
+      my_cnx.close()
+      streamlit.text(back_from_function)
