@@ -47,4 +47,4 @@ if streamlit.button('Clear Table Contents'):
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    back_from_function = clear_table_contents()
    my_cnx.close()
-   streamlit.dataframe(back_from_function)
+   streamlit.text(back_from_function)
