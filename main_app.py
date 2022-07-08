@@ -26,14 +26,15 @@ streamlit.header('Putting Data Into Snowflake')
 
 def insert_row_snowflake(new_row):
    with my_cnx.cursor() as my_cur:
-      my_cur.execute("INSERT INTO TEST_TABLE VALUES ('" + new_row + "')")
+      my_cur.execute("INSERT INTO TEST_TABLE VALUES ('" + row1 + "'), ('" + row2 + "')")
       streamlit.balloons()
-      return "Thanks for adding " + new_row
+      return "Thanks for adding " + row1 + " " + row2 "."
    
-add_row = streamlit.text_input('Record name here: ')
+row1 = streamlit.text_input('First name here: ')
+row2 = streamlit.text_input('Last name here: ')
 if streamlit.button('Add to Table'):
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
-   back_from_function = insert_row_snowflake(add_row)
+   back_from_function = insert_row_snowflake(row1, row2)
    my_cnx.close()
    streamlit.text(back_from_function)
    
