@@ -4,11 +4,13 @@ import pandas
 import requests
 from urllib.error import URLError
 
+streamlit.set_page_config(page_title="Data Uploading", page_icon="❄️", layout="centered")
+
 streamlit.title("Data Uploading ❄️")
 
-streamlit.header('Data Upload Demo')
+streamlit.title('Data Upload Demo')
 
-streamlit.text('Pulling Data From Snowflake')
+streamlit.header('Pulling Data From Snowflake')
 
 streamlit.text("Table contains:")
 def get_table_contents():
