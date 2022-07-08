@@ -30,8 +30,8 @@ def insert_row_snowflake(new_row1, new_row2):
       streamlit.balloons()
       return "Thanks for adding " + row1 + " " + row2
    
-row1 = streamlit.text_input('First name here: ')
-row2 = streamlit.text_input('Last name here: ')
+row1 = streamlit.text_input('First name here: ', ['Sam'])
+row2 = streamlit.text_input('Last name here: ', ['Smith'])
 if streamlit.button('Add to Table'):
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    back_from_function = insert_row_snowflake(row1, row2)
