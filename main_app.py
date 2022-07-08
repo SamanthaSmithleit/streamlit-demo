@@ -29,9 +29,9 @@ def insert_row_snowflake(new_row):
    
 add_row = streamlit.text_input('Record name here: ')
 if streamlit.button('Add to Table'):
+   streamlit.balloons()
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    back_from_function = insert_row_snowflake(add_row)
    my_cnx.close()
-   streamlit.balloons()
    streamlit.text(back_from_function)
    
