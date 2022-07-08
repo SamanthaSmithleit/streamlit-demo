@@ -28,7 +28,7 @@ def insert_row_snowflake(new_row1, new_row2):
    with my_cnx.cursor() as my_cur:
       my_cur.execute("INSERT INTO TEST_TABLE VALUES ('" + new_row1 + "','" + new_row2 + "')")
       streamlit.balloons()
-      return "Thanks for adding " + row1
+      return "Thanks for adding " + row1 + " " + row2
    
 row1 = streamlit.text_input('First name here: ')
 row2 = streamlit.text_input('Last name here: ')
