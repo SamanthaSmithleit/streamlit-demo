@@ -11,7 +11,7 @@ streamlit.header('Pulling Data From Snowflake')
 streamlit.text("Table contains:")
 def get_table_contents():
    with my_cnx.cursor() as my_cur:
-      my_cur.execute("SELECT * FROM FRUIT_LOAD_LIST")
+      my_cur.execute("SELECT * FROM TEST_TABLE")
       return my_cur.fetchall()
 
 if streamlit.button('Get Table Contents'):
