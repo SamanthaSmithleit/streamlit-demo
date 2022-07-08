@@ -8,8 +8,6 @@ streamlit.set_page_config(page_title="Data Uploading", page_icon="❄️", layou
 
 streamlit.title("Data Uploading ❄️")
 
-streamlit.title('Data Upload Demo')
-
 streamlit.header('Pulling Data From Snowflake')
 
 streamlit.text("Table contains:")
