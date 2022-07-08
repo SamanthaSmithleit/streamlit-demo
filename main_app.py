@@ -4,6 +4,8 @@ import pandas
 import requests
 from urllib.error import URLError
 
+streamlit.set_page_config(page_title="Data Uploading", page_icon="❄️", layout="centered")
+
 streamlit.title('Data Upload Demo')
 
 streamlit.header('Pulling Data From Snowflake')
