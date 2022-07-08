@@ -32,5 +32,6 @@ if streamlit.button('Add to Table'):
    my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
    back_from_function = insert_row_snowflake(add_row)
    my_cnx.close()
-   streamlit.text(back_from_function)
    streamlit.balloons()
+   streamlit.text(back_from_function)
+   
