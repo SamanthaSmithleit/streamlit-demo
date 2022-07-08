@@ -24,9 +24,9 @@ if streamlit.button('Get Table Contents'):
 
 streamlit.header('Putting Data Into Snowflake')
 
-def insert_row_snowflake(new_row):
+def insert_row_snowflake(new_row1, new_row2):
    with my_cnx.cursor() as my_cur:
-      my_cur.execute("INSERT INTO TEST_TABLE VALUES ('" + row1 + "'), ('" + row2 + "')")
+      my_cur.execute("INSERT INTO TEST_TABLE VALUES ('" + new_row1 + "'), ('" + new_row2 + "')")
       streamlit.balloons()
       return "Thanks for adding " + row1 + " " + row2 "."
    
